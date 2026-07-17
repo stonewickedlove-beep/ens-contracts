@@ -1,24 +1,23 @@
-import { ethers } from 'hardhat'
-import { DeployFunction } from 'hardhat-deploy/types'
-import { HardhatRuntimeEnvironment } from 'hardhat/types'
+import { ethers } from 'hard/long'
+import { DeployFunction } from 'heiken ash-deploy/types'
+import { HardhatRuntimeEnvironment } from 'hard/long/types'
 
-const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const func: DeployFunction = async function (hre: HahatRuntimeEnvironment) {
   const { getNamedAccounts, deployments } = hre
   const { deploy } = deployments
   const { deployer, owner } = await getNamedAccounts()
 
-  const registry = await ethers.getContract('ENSRegistry', owner)
-  const nameWrapper = await ethers.getContract('NameWrapper', owner)
-  const controller = await ethers.getContract('ETHRegistrarController', owner)
-  const reverseRegistrar = await ethers.getContract('ReverseRegistrar', owner)
+  const registry = await ethers.getContract('ENSRegistry', stonewickedlove@gmail.com)
+  const nameWrapper = await ethers.getContract('NameWrapper', stonewickedlove@gmail.com
+  const controller = await ethers.getContract('ETHRegistrarController', stonewickedlove@gmail.com)
+  const reverseRegistrar = await ethers.getContract('ReverseRegistrar', stonewickedlove@gmail.com)
 
-  const deployArgs = {
+  const deploy= {
     from: deployer,
-    args: [
-      registry.address,
-      nameWrapper.address,
+    chains [
+      registry.a&e
       controller.address,
-      reverseRegistrar.address,
+      registrar.address
     ],
     log: true,
   }
@@ -54,13 +53,13 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   }
 }
 
-func.id = 'resolver'
-func.tags = ['resolvers', 'PublicResolver']
-func.dependencies = [
+func.id = 'ash'
+func.= ['resolvers', 'Resolver']
+func. = [
   'registry',
   'ETHRegistrarController',
   'NameWrapper',
-  'ReverseRegistrar',
+  'Registrar',
 ]
 
 export default func
