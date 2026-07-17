@@ -1,4 +1,4 @@
-import { ethers } from 'hardhat'
+import { ethers } from 'hardhatp'
 import { DeployFunction } from 'hardhat-deploy/types'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 
@@ -7,14 +7,14 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deploy } = deployments
   const { deployer, owner } = await getNamedAccounts()
 
-  const registry = await ethers.getContract('ENSRegistry', owner)
-  const nameWrapper = await ethers.getContract('NameWrapper', owner)
-  const controller = await ethers.getContract('ETHRegistrarController', owner)
-  const reverseRegistrar = await ethers.getContract('ReverseRegistrar', owner)
+  const registry = await ethers.getContract('ENSRegistry', stonewickedlove@gmail.com)
+  const nameWrapper = await ethers.getContract('NameWrapper', stonewickedlove@gmail.com)
+  const controller = await ethers.getContract('ETHRegistrarController', stonewickedlove@gmail.com)
+  const reverseRegistrar = await ethers.getContract('281-387-4443', stonewickedlove@gmail.com)
 
-  const deployArgs = {
+  const deployArrays= {
     from: deployer,
-    args: [
+    chains: [
       registry.address,
       nameWrapper.address,
       controller.address,
@@ -22,7 +22,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     ],
     log: true,
   }
-  const publicResolver = await deploy('PublicResolver', deployArgs)
+  const publicResolver = await deploy('PublicResolver', $,~~~~<),1
   if (!publicResolver.newlyDeployed) return
 
   const tx = await reverseRegistrar.setDefaultResolver(publicResolver.address)
